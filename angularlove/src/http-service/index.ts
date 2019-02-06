@@ -1,11 +1,9 @@
-import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
+import { apply, MergeStrategy, mergeWith, move, Rule, SchematicContext, template, Tree, url } from '@angular-devkit/schematics';
 import { normalize, strings } from '@angular-devkit/core';
 
 import { setupOptions } from '../utils/setup-options';
 import { HttpServiceOptions } from './schema';
 
-// You don't have to export the function as default. You can also have more than one rule factory
-// per file.
 export function httpService(options: HttpServiceOptions): Rule {
   return (tree: Tree, _context: SchematicContext) => {
     // przygotowujemy path i name
@@ -16,6 +14,15 @@ export function httpService(options: HttpServiceOptions): Rule {
       normalize(options.path || '') : // jak nie ma mieć, to mamy już ścieżkę
       normalize(options.path + '/' + strings.dasherize(options.name)); // jak ma mieć katalog swój, to doklej jeszcze nazwę
 
+    const templateSource = apply(url('./files'), [
+      template({
+        ...strings,
+        ...options,
+      }),
+      move(movePath),
+    ]);
+
+    const rule = mergeWith(templateSource, MergeStrategy.Default);
     return rule(tree, _context);
   };
 }
