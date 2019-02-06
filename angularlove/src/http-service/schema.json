@@ -24,6 +24,11 @@
       "$default": {
         "$source": "projectName"
       }
+    },
+    "flat": {
+      "type": "boolean",
+      "description": "When true, creates the new files at the top level of the current project.",
+      "default": false
     }
   }
 }
