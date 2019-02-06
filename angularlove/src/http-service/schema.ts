@@ -5,4 +5,6 @@ export interface HttpServiceOptions {
   path?: string;
   /* The name of the project. */
   project?: string;
+  /* Flag to indicate if a directory for file should be created. */
+  flat?: boolean;
 }
