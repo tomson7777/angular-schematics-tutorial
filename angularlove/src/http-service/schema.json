@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "AngularLoveHttpServiceSchematic",
+  "title": "Creates a httpService Schematic.",
+  "type": "object",
+  "properties": {
+    "path": {
+      "type": "string",
+      "format": "path",
+      "description": "The path to create the schematic within.",
+      "visible": false
+    },
+    "name": {
+      "description": "Specifies the name of the generated Class.",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    }
+  }
+}
