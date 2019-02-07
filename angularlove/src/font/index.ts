@@ -1,4 +1,4 @@
-import { Rule, SchematicsException, Tree } from '@angular-devkit/schematics';
+import { Rule, SchematicContext, SchematicsException, Tree } from '@angular-devkit/schematics';
 import { DefaultTreeDocument, DefaultTreeElement, parse as parseHtml } from 'parse5';
 import { getChildElementIndentation } from './parse5-element';
 
@@ -57,7 +57,7 @@ export function appendHtmlElementToHead(tree: Tree, htmlFilePath: string | undef
 }
 
 export function font(): Rule {
-  return (tree: Tree) => {
+  return (tree: Tree, context: SchematicContext) => {
 
     const fontLink = `<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">`;
 
@@ -66,5 +66,7 @@ export function font(): Rule {
       getIndexHtmlPath(tree),
       fontLink,
     );
+
+    context.logger.info( `✅️ Font Lato added to index.html`);
   };
 }
