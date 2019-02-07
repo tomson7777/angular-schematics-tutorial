@@ -9,4 +9,6 @@ export interface HttpServiceOptions {
   flat?: boolean;
   /* Http methods to generate. */
   methods?: string;
+  /* type for http response */
+  responseType?: 'json' | 'text' | 'blob' | 'arraybuffer';
 }

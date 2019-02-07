@@ -34,6 +34,21 @@
       "description": "Specifies HTTP methods",
       "type": "string",
       "default": "get,post,put,delete"
+    },
+    "responseType": {
+      "type": "string",
+      "description": "Specifies the responseType for http methods",
+      "default": "json",
+      "x-prompt": {
+        "message": "Which responseType would you like to use?",
+        "type": "list",
+        "items": [
+          { "value": "json", "label": "JSON (default)" },
+          { "value": "text", "label": "TEXT" },
+          { "value": "arraybuffer", "label": "ARRAY BUFFER" },
+          { "value": "blob", "label": "BLOB" }
+        ]
+      }
     }
   }
 }
