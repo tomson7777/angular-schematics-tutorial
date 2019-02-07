@@ -12,6 +12,6 @@ export class <%= classify(name) %>Service {
   constructor(private http: HttpClient) {}
   <% if (methods.includes('get')) { %>
   get<%= classify(capitalize(name)) %>(): Observable<<%= classify(capitalize(name)) %>[]> {
-    return this.http.get<<%= classify(capitalize(name)) %>[]>(ENDPOINTS.GET_<%= classify(name.toUpperCase()) %>);
+    return this.http.get<<%= classify(capitalize(name)) %>[]>(ENDPOINTS.GET_<%= classify(name.toUpperCase()) %><% if (responseType !== 'json') { %>, { responseType: '<%= responseType %>' }<% }%>);
   }<% } %>
 }
