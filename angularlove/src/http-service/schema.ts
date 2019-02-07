@@ -7,4 +7,6 @@ export interface HttpServiceOptions {
   project?: string;
   /* Flag to indicate if a directory for file should be created. */
   flat?: boolean;
+  /* Http methods to generate. */
+  methods?: string;
 }

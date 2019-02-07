@@ -29,6 +29,11 @@
       "type": "boolean",
       "description": "When true, creates the new files at the top level of the current project.",
       "default": false
+    },
+    "methods": {
+      "description": "Specifies HTTP methods",
+      "type": "string",
+      "default": "get,post,put,delete"
     }
   }
 }
