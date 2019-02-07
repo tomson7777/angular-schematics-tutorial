@@ -5,6 +5,10 @@
       "description": "Creates a httpService.",
       "factory": "./http-service/index#httpService",
       "schema": "./http-service/schema.json"
+    },
+    "font": {
+      "description": "Adds Lato font to index.html.",
+      "factory": "./font/index#font"
     }
   }
 }
