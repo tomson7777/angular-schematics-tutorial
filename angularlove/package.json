@@ -18,6 +18,10 @@
     "@types/jasmine": "^2.6.0",
     "@types/node": "^8.0.31",
     "jasmine": "^2.8.0",
+    "parse5": "^5.1.0",
     "typescript": "~3.1.6"
+  },
+  "devDependencies": {
+    "@types/parse5": "^5.0.0"
   }
 }
