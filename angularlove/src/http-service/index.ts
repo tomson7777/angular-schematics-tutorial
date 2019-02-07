@@ -22,7 +22,7 @@ export function httpService(options: HttpServiceOptions): Rule {
       move(movePath),
     ]);
 
-    const rule = mergeWith(templateSource, MergeStrategy.Default);
+    const rule = mergeWith(templateSource);
     return rule(tree, _context);
   };
 }
