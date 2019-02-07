@@ -9,6 +9,11 @@
     "font": {
       "description": "Adds Lato font to index.html.",
       "factory": "./font/index#font"
+    },
+    "ui-framework": {
+      "description": "Adds framework to package.json and install after.",
+      "factory": "./ui-framework/index#uiFramework",
+      "schema": "./ui-framework/schema.json"
     }
   }
 }

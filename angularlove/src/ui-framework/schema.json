@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "uiframework",
+  "title": "adds a framework to package.json and install after",
+  "type": "object",
+  "properties": {
+    "uiFramework": {
+      "type": "string",
+      "description": "Specifies UI framework",
+      "x-prompt": {
+        "message": "Which UI Framework would you like to use?",
+        "type": "list",
+        "items": [
+          { "value": "bootstrap", "label": "Bootstrap 4" },
+          { "value": "foundation", "label": "Foundation" },
+          { "value": "skeleton", "label": "Skeleton" }
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}
