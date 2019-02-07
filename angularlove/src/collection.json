@@ -14,6 +14,11 @@
       "description": "Adds framework to package.json and install after.",
       "factory": "./ui-framework/index#uiFramework",
       "schema": "./ui-framework/schema.json"
+    },
+    "list-component": {
+      "description": "Creates a component with list.",
+      "factory": "./list-component/index#listComponent",
+      "schema": "./list-component/schema.json"
     }
   }
 }
