@@ -19,6 +19,10 @@
       "description": "Creates a component with list.",
       "factory": "./list-component/index#listComponent",
       "schema": "./list-component/schema.json"
+    },
+    "async": {
+      "description": "Async Schematic - Performs a HTTP request",
+      "factory": "./async/index#async"
     }
   }
 }
